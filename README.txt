@@ -17,7 +17,7 @@ Example: CALL GetWatchHistoryBySubscriber(2);
 Logic: 
 
 1. Performs an inner join between `WatchHistory` table and `Shows` table and displays the rows.
-2. All the required fields are displayed using the `SELECT` query.3
+2. All the required fields are displayed using the `SELECT` query.
 
 ----------------------
 Question 3
@@ -39,8 +39,9 @@ Question 4
 Query: CALL SendWatchTimeReport();
 Logic:
 
-1. Creates a cursor for all SubscriberID having WatchTime > 0
-2. Iterates over this cursor and invokes the GetWatchHistoryBySubscriber(SubscriberID)
+1. Creates a cursor for all SubscriberID having WatchTime > 0 in the table `WatchHistory`.
+2. Iterates over this cursor and invokes the GetWatchHistoryBySubscriber(SubscriberID) procedure
+   for each `SubscriberID`.
 
 
 ----------------------
@@ -50,4 +51,4 @@ Query: CALL SendWatchTimeReport2();
 Logic:
 
 1. Creates a cursor for all `SubscriberID` in the `Subscribers` table
-2. Iterates over this cursor and invokes the GetWatchHistoryBySubscriber(SubscriberID)
+2. Iterates over this cursor and invokes the GetWatchHistoryBySubscriber(SubscriberID) for each `SubscriberID`.
