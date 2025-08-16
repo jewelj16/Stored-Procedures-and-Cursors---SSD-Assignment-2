@@ -1,3 +1,5 @@
+DROP PROCEDURE IF EXISTS AddSubscriberIfNotExists;
+
 DELIMITER //
 CREATE PROCEDURE AddSubscriberIfNotExists(IN subName VARCHAR(100))
 BEGIN
@@ -11,5 +13,3 @@ BEGIN
     END IF;
 END //
 DELIMITER ;
-
--- CALL AddSubscriberIfNotExists("Jordan Smith");

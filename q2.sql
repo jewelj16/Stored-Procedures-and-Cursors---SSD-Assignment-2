@@ -1,3 +1,5 @@
+DROP PROCEDURE IF EXISTS GetWatchHistoryBySubscriber;
+
 DELIMITER //
 CREATE PROCEDURE GetWatchHistoryBySubscriber(IN sub_id INT)
 BEGIN
@@ -8,5 +10,3 @@ BEGIN
     WHERE SubscriberID = sub_id;
 END //
 DELIMITER ;
-
--- CALL GetWatchHistoryBySubscriber(3);

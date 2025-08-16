@@ -1,3 +1,5 @@
+DROP PROCEDURE IF EXISTS ListAllSubscribers;
+
 DELIMITER //
 CREATE PROCEDURE ListAllSubscribers()
 BEGIN
@@ -20,5 +22,3 @@ BEGIN
     CLOSE subscribers_name_cursor;
 END //
 DELIMITER ;
-
--- To call this procedure - use CALL ListAllSubscribers();
